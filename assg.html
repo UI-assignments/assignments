@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <title>layout</title>
+   
+</head>
+<style>
+
+.html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px 20px;
+    padding : 40px;
+    height: 400px;
+    width:1000px;
+}
+
+.section-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height:400px;
+}
+
+.box-1 {
+    background-color: darkgray;
+    height:140px;
+    width:600px;
+}
+
+.box-2 {
+    background-color: lightgray;
+    height: 220px;
+    width: 600px;
+} 
+
+.section-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 15px;
+}
+
+.heading-container {
+    margin-bottom: 20px;
+}
+
+.thickline-1 {
+    margin:10px;
+    background: grey;
+    height:15px;
+    width:130px;
+}
+
+.smallline-2 {
+    margin:10px;
+    background: #AFB2B5;
+    height:7px;
+    width:130px;
+}
+
+.smallline-3,.smallline-4,.smallline-5,.smallline-6,.smallline-7,.smallline-8 {
+    margin:12px;
+    background: #AFB2B5;
+    height:7px;
+    width:500px;
+}
+
+.box-3 {
+    background-color: lightgrey;
+    height:400px;
+    width:200px;
+    align-items: center;
+}
+
+.line-1{
+    margin:10px;
+    margin-top:130px;
+    margin-left:40px ;
+    background: grey;
+    height:15px;
+    width:120px; 
+}
+.line-2, .line-3, .line-4, .line-5 {
+    margin:10px;
+    margin-left: 40px;
+    background: #AFB2B5;
+    height:7px;
+    width:120px; 
+}
+.smallbox-1 {
+    margin:10px;
+    margin-top: 50px;
+    margin-left: 40px;
+    background: #AFB2B5;
+    height:70px;
+    width:120px;
+}
+
+</style>
+<body>
+    <div class="container">
+        <div class="section-1">
+            <div class="box-1"></div>
+            <div class="box-2">
+                <div class="section-2">
+                    <div class="heading-container">
+                        <div class="thickline-1"></div>
+                        <div class="smallline-2"></div>
+                    </div>
+                    <div class="info-container">
+                        <div class="smallline-3"></div>
+                        <div class="smallline-4"></div>
+                        <div class="smallline-5"></div>
+                        <div class="smallline-6"></div>
+                        <div class="smallline-7"></div>
+                        <div class="smallline-8"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box-3">
+            <img src="image.jpg" alt="" srcset="" width="30px" height="30px">
+            <div class="line-1"></div>
+            <div class="line-2"></div>
+            <div class="line-3"></div>
+            <div class="line-4"></div>
+            <div class="line-5"></div>
+            <div class="smallbox-1"></div>
+        </div>
+    </div>
+
+    
+
+</body>
+</html>
