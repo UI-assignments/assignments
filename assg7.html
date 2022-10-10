@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+   <style>
+    .container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: rgb(147, 195, 199);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center; 
+    border-radius: 5px;
+    margin-left: 35%;
+    margin-right: 35%;
+    padding: 20px;
+    margin-top: 50px;
+
+}
+ 
+body {
+    background-image: url('bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h2 {
+    color: rgb(65, 65, 65);
+    font-size: 30px;
+}
+
+.social,.bottom {
+    margin: auto;
+    padding: 20px;
+    display: block;
+    
+}
+
+.fb {
+    background-color: #3B5998;
+    color: white;
+    border-radius: 3px;
+    padding: 15px;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.google {
+    background-color:white;
+    color: black;
+    border-radius: 3px;
+    padding: 15px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+input{
+    width: 300px;
+    padding:15px;
+    border: none;
+    border-radius: 4px;
+    margin: 5px 0;
+    display:block;
+    outline: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    
+}
+label {
+    margin-left: -215px;
+}
+.signin-button {
+    background-color:black;
+    color: white;
+    border-radius: 4px;
+    padding: 15px;
+    width: 300px;
+    margin-top: 10px;
+}
+   </style>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <h2 style="color: rgb(65, 65, 65);">Sign In With</h2>
+            <div class="social">
+                <a href="#" class="fb">
+                    <i class="fa fa-facebook fa-fw"></i> facebook
+                </a>
+                <a href="#" class="google">
+                    <i class="fa fa-google fa-fw"></i> google
+                </a>
+            </div>
+            <div class="input">
+                <label for="username">Username </label>
+                <input type="text"  name="Username" placeholder="">&nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; 
+                <label for="password">Password <a href="#" class="forgetpwd"> Forget?</a></label>
+                <input type="password" name="pswd" placeholder="">
+            </div>
+            <div class="signin">
+                <button type="submit" class="signin-button">Sign In</button>
+            </div>
+            <div class="bottom">
+                <p>Not a member? <a href="#">Sign up now</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
