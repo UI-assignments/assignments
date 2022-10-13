@@ -1,0 +1,71 @@
+@mixin flex($align: center, $direction: row) {
+  display: flex;
+  justify-content: $align;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+body {
+  @include flex;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: larger;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  @include flex(space-evenly);
+  width: 700px;
+  height: 300px;
+  background: rgb(158, 156, 156);
+}
+
+.con-1st-col {
+  @include flex;
+  background: rgb(230, 81, 81);
+  width: 35%;
+  height: 90%;
+}
+
+.con-2nd-col {
+  @include flex(space-between, column);
+  width: 55%;
+  height: 90%;
+}
+
+.con-2nd-col-1st-row {
+  @include flex;
+  background: rgb(164, 241, 92);
+  width: 100%;
+  height: 40%;
+}
+.con-2nd-col-2nd-row {
+  @include flex(space-between, row);
+  width: 100%;
+  height: 50%;
+}
+.con-2nd-col-2nd-row-1st-col {
+  @include flex;
+  background: pink;
+  width: 47%;
+  height: 100%;
+}
+.con-2nd-col-2nd-row-2nd-col {
+  @include flex(space-between, column);
+  width: 47%;
+  height: 100%;
+}
+.con-2nd-col-2nd-row-2nd-col-1st-row {
+  @include flex;
+  background: rgb(82, 115, 223);
+  width: 100%;
+  height: 45%;
+}
+.con-2nd-col-2nd-row-2nd-col-2nd-row {
+  @include flex;
+  background: rgb(82, 115, 223);
+  width: 100%;
+  height: 45%;
+}
