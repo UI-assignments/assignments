@@ -1,0 +1,81 @@
+$bg: pink;
+$bgheader: rgb(144, 227, 238);
+$textalign: center;
+$bgleftsection: rgb(0, 113, 128);
+$bgrightsection: rgb(223, 116, 116);
+$bgimages: #b6afaf;
+
+@mixin important-text {
+  color: #fff;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+@mixin flex-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+$c: "color";
+
+body {
+  width: 700px
+}
+.header {
+  @include important-text;
+  width: 100%;
+  height: 70px;
+  background-#{$c}: $bgheader;
+}
+.content {
+  @include flex-box;
+}
+.left_section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 200px;
+  background-#{$c}: $bgleftsection;
+  margin-top: 20px;
+}
+.left_section p {
+  @include important-text;
+}
+.right_section {
+  width: 58em;
+  height: 200px;
+  background-color: $bgrightsection;
+  margin-top: 20px;
+  @include flex-box;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.right_section p {
+  @include important-text;
+  flex-wrap: wrap;
+}
+.right_section {
+  width: 58em;
+  height: 200px;
+  background-color: $bgrightsection;
+  margin-top: 20px;
+  @include flex-box;
+  justify-content: space-around;
+}
+
+.image1,
+.image2,
+.image3 {
+  width: 10rem;
+  height: 5rem;
+  background-color: $bgimages;
+}
+.header {
+  @include important-text;
+  width: 100%;
+  height: 70px;
+  background-#{$c}: $bgheader;
+}
