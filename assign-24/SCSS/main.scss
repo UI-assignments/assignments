@@ -1,0 +1,228 @@
+@import "base";
+
+.container {
+    #{$w}: $full-width;
+  
+    #{$b}: 3px double gray;
+    #{$m}: 2rem auto;
+    #{$b}-top: 4px solid $color-dark;
+}
+
+.section-1 {
+    @include flex-col;
+  
+    align-items: flex-end;
+    background-image: gradient(rgb(32, 73, 115), rgb(172, 211, 249));
+    #{$w}: $full-width;
+    #{$h}: 250px;
+    #{$m}: 0;
+}
+
+.signup-login-btn {
+    background-color: $color-dark;
+    width: fit-content;
+    height: 20px;
+    #{$p}: 0 10px 2px;
+    #{$b}-bottom-left-#{$r}: 8px;
+    #{$b}-bottom-right-#{$r}: 8px;
+    font-size: 12px;
+    color: $color;
+    #{$m}: 0 2rem;
+    float: right;
+}
+
+.header {
+    @include flex;
+    #{$m}: auto;
+    #{$p}: 1rem;
+    #{$w}: 90%;
+    height: 40%;
+}
+
+
+.nav-brand {
+    #{$m}: 1rem;
+    color: $color;
+    text-transform: uppercase;
+    #{$w}: 40%;
+}
+
+%nav {
+    @include flex;
+    list-style: none;
+    color: $color;
+}
+
+.nav-items {
+    @extend %nav;
+    #{$w}: 50%;
+    #{$p}: .5rem;
+}
+
+.head-box {
+    @include flex;
+    overflow: hidden;
+}
+
+.header-box {
+    color: $color;
+    background-image: gradient(rgb(32, 73, 115), rgb(172, 211, 249));
+    #{$h}: 80px;
+    #{$w}: 200px;
+    text-align: #{$c};
+}
+
+.know-more {
+    background-color: lightgreen;
+    text-transform: uppercase;
+    #{$h}: 20px;
+    #{$w}: 90px;
+    font-size: 12px;
+    float: right;
+    text-align: #{$c};
+    #{$p}: .2rem 0;
+    transform: rotate(-50deg);
+    #{$m}-right: 2rem;
+    #{$m}-top: 2.3rem;
+}
+
+.main {
+    #{$m}: 0 2rem;
+    z-index: 5;
+}
+
+.section-2 {
+    @include flex;
+}
+
+.image {
+    #{$w}: 50%;
+    #{$h}: 13rem;
+    #{$b}: .5rem solid $color;
+    box-shadow: .5px .5px 5px black;
+    #{$b}-#{$r}: 8px;
+    #{$m}: -6.5rem 0 0 0;
+}
+.image img {
+    object-fit: cover;
+    #{$w}: 100%;
+    #{$h}: 100%
+}
+
+.content {
+    #{$w}: 40%;
+    @extend %para;
+}
+
+.btns {
+    @include flex;
+}
+
+.btn {
+    font-size: xx-small;
+    #{$w}: 40%;
+    #{$b}: 1px solid gray;
+    text-align: #{$c};
+    #{$p}: 10px;
+}
+
+.btn span {
+    @extend %para;
+}
+
+.section-3 {
+    @include flex;
+    #{$m}: 1rem 0;
+}
+
+.section-3 h2 {
+    color: lighten($color-dark, 35%);
+}
+
+.left {
+    #{$w}: 35%;
+    @extend %para;
+}
+
+.right {
+    @extend %para;
+    #{$w}: 60%;
+}
+
+.card-section {
+    @include flex;
+
+}
+
+.card-section img {
+    #{$w}: 60px;
+    #{$h}: 60px;
+}
+
+.card-section p {
+    #{$w}: 75%;
+}
+
+.video-section {
+    @include flex;
+    #{$m}: 10px;
+}
+
+%small-size {
+    font-size: small;
+}
+
+.video-para {
+    width: 50%;
+}
+
+.footer {
+    background-color: $color-footer;
+    #{$p}: 1rem 0;
+}
+
+.footer-box {
+    @extend %nav;
+    background-color: lighten($color-dark, 10%);
+    #{$p}: 1rem;
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.box-1 ul li {
+    @extend %small-size;
+    #{$m}: 5px 0;
+    list-style: circle;
+}
+
+.footer p {
+    text-align: left;
+}
+
+.box-1 .p-mission {
+    @extend %small-size;
+    text-align: left;
+
+}
+
+.box-1 {
+    width: 22%;
+}
+
+@each $color in $btn-color {
+    .btn-#{$color} {
+        background-color: $color;
+    }
+}
+
+@for $i from 1 through 3 {
+    .p-#{$i} {
+        color: map-get($map: $p-color, $key: $i);
+    }
+
+    .p-rel-#{$i} {
+        background-color: map-get($map: $p-color, $key: $i);
+        #{$w}: fit-content;
+        #{$p}: 2px;
+    }
+}

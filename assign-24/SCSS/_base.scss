@@ -1,0 +1,34 @@
+$color-bg: red;
+$color:white;
+$color-dark: rgb(12, 12, 79);
+$color-footer: rgb(194, 211, 248);
+$w: "width";
+$h: "height";
+$p: "padding";
+$b: "border";
+$m : "margin";
+$r: "radius";
+$c: "center";
+
+$full-width: 800px;
+
+@function gradient($color1, $color2) {
+    @return linear-gradient(to top left, $color1, $color2);
+}
+
+@mixin flex {
+    display: flex;
+    justify-content: space-between;
+}
+@mixin flex-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+$btn-color: blue orange;
+
+$p-color:(
+    1: rgb(28, 233, 28),
+    2: orange,
+    3:rgb(24, 235, 239)
+)
