@@ -1,0 +1,55 @@
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:20px;
+    height:300px;
+    background-color: rgb(187, 231, 216);
+    
+
+}
+.tbl,tr,th,td{
+ border:2px solid teal;
+}
+.tbl{
+    width:500px;
+}
+.one{
+    height:250px;
+    display: flex;
+    width: 60%;
+    padding:20px;
+    background-color: blueviolet;
+    color: aliceblue;
+    font-size: medium;
+    text-align: center;
+   
+}
+
+.two{
+    height:250px;
+    display: flex;
+    width: 30%;
+    padding:20px;
+    background-color: rgb(14, 5, 22);
+    color: aliceblue;
+    font-size: medium;
+    text-align: center;
+    display: flex; 
+    flex-direction: column; 
+
+}
+
+.it{
+padding: 10px;
+height:400px;
+color: aliceblue;
+}
+
+.ha {
+    height:10px;
+    width: 100%;
+    padding-bottom: 30px;
+    display: block;
+   
+}

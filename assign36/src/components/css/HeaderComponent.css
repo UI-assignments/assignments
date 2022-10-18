@@ -1,0 +1,58 @@
+.header{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background-color: black;
+    color:rgb(145, 85, 12);
+    height: 60px;
+    
+}
+.home{
+    height: 100%;
+    width: 20%px;
+    border: 1px solid rgb(14, 14, 14);
+    color: aliceblue;
+    
+    
+
+}
+
+.home{
+    height: 20px;
+    width: 80px;
+    border: 1px solid rgb(14, 14, 14);
+    color: aliceblue;
+}
+
+.menu{
+    height: 20px;
+    width: 80px;
+    border: 1px solid rgb(14, 14, 14);
+    color: aliceblue;
+}
+
+.menu1{
+    height: 20px;
+    width: 80px;
+    border: 1px solid rgb(14, 14, 14);
+    color: aliceblue;
+}
+.menu2{
+    height: 20px;
+    width: 80px;
+    border: 1px solid rgb(14, 14, 14);
+    color: aliceblue;
+}
+
+.menu3{
+    height: 20px;
+    width: 80px;
+    border: 1px solid rgb(14, 14, 14);
+    color: aliceblue;
+}
+.menu4{
+    height: 20px;
+    width: 80px;
+    border: 1px solid rgb(14, 14, 14);
+    color: aliceblue;
+}
