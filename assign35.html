@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="asign35.css" />
+</head>
+<body>
+    <h1>Exhibitor Regestration</h1>
+    
+    <section class="container">
+        <div class="v"></div>
+        <form>
+            <div class="left">
+                <label>Prefix</label>
+                <input type="text" id="prefix" name="prefix"/><br>
+                
+                <label>Name</label>
+                <input type="text" id="name" name="name"/><br>
+        
+                <label>Preferred Pronouns</label>
+                <input type="text" id="ppronous" name="ppronous"/><br>
+            
+                <label>Email</label>
+                <input type="email" id="email" name="email"/><br>
+        
+                <label>Work phone</label>
+                <input type="tel" id="phone" name="phone"><br>
+
+                <label>Cell phone</label>
+                <input type="tel" id="cphone" name="cphone"><br>
+            
+                <label>Job Title</label>
+                <input type="text" id="job" name="job"><br>
+            
+                <label>Company</label>
+                <input type="text" id="company" name="company"><br>
+            
+                <label>Full Bussiness Address</label><br>
+                <textarea id="address" name="Bussiness_address" cols="40" rows="3"></textarea><br>
+            
+                <label>Company Website</label><br>
+                <input type="text" id="website" name="website"><br>
+            </div>
+            <div class="right">
+                <label> Company Description</label><br>
+                <textarea id="company_description" name="company_description" cols="50" rows="5"></textarea><br>
+
+                <label> Product/Service to exhibit</label><br>
+                <textarea id="Service" name="Product/service to exhibit" cols="50" rows="5"></textarea><br>
+
+                <label>what type of booth do you like</label><br>
+                <input type="radio" id="inperson" name="booth" value="inperson"><label>In-Person booth only</label><br>
+                <input type="radio" id="virtual" name="booth" value="virtual"><label>Virtual booth only</label><br>
+                <input type="radio" id="both" name="booth" value="inperson&virtual"><label>Virtual & In-Person booth only</label><br>
+
+                <label> List your staff(name,email,phone)</label><br>
+                <textarea id="staff" name="List your staff" cols="50" rows="3"></textarea><br>
+
+                <label> competitators you dont want to be near</label><br>
+                <textarea id="competitators" name="competitators" cols="50" rows="5"></textarea><br>
+            </div>
+        </form>
+    </section>
+    <div class="button">
+        <button type="submit">Submit</button>
+    </div> 
+    <div class="results">
+        <h3>Form Data</h3>
+        <pre></pre>
+    </div>
+    <script>
+    function handleFormSubmit(event) {
+        event.preventDefault();
+        const data = new FormData(event.target);
+        const formJSON = Object.fromEntries(data.entries());
+        const results = document.querySelector('.results pre');
+        results.innerText = JSON.stringify(formJSON, null, 2);
+    }
+    const form = document.querySelector('.container');
+    form.addEventListener('submit', handleFormSubmit);
+    </script>
+</body>
+</html>
