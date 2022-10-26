@@ -1,0 +1,28 @@
+{
+  "employeeDetails": [
+    {
+      "name": "John",
+      "email": "iuy@gmail.com",
+      "dept": "HR",
+      "id": 1
+    },
+    {
+      "name": "Jessy",
+      "email": "hbd2gmail.com",
+      "dept": "HR",
+      "id": 2
+    },
+    {
+      "name": "vin",
+      "email": "vin@gmail.com",
+      "dept": "HR",
+      "id": 4
+    },
+    {
+      "name": "vin",
+      "email": "vin@gmail.com",
+      "dept": "IT",
+      "id": 5
+    }
+  ]
+}
