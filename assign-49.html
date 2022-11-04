@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 25px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .header {
+            background-color: rgb(0, 106, 227);
+            height:60px;
+            padding: 10px;
+            border-radius: 5px;
+
+        }
+
+        .content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 20px;
+            height: 500px;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: rgb(5, 157, 5);
+            width: 60%;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .item {
+            display: flex;
+            flex-wrap: wrap;
+            height: 60%;
+            justify-content: space-between;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+            align-items: center;
+        }
+
+        .items {
+            background-color: rgb(0, 73, 0);
+            height: 60px;
+            width: 160px;
+            border-radius: 5px;
+            box-shadow: 0 8px 12px 0 rgba(0,0,0,0.5);
+        }
+
+        .sidebar {
+            background-color: rgb(253, 147, 77);
+            width: 35%;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .footer {
+            background-color: rgb(0, 106, 227);
+            height:60px;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="content">
+            <div class="main">
+                <div>Main</div>
+                <div class="item">
+                    <div class="items">Item</div>
+                    <div class="items">Item</div>
+                    <div class="items">Item</div>
+                    <div class="items">Item</div>
+                    <div class="items">Item</div>
+                    <div class="items">Item</div>
+                    <div class="items">Item</div>
+                    <div class="items">Item</div>
+                    <div class="items">Item</div>
+                    <div class="items">Item</div>
+                    <div class="items">Item</div>
+                </div>
+                
+            </div>
+            <div class="sidebar">Sidebar</div>
+        </div>
+        <div class="footer">Footer</div>
+    </div>
+    
+</body>
+</html>
