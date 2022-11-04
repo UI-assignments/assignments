@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+</head>
+<style>
+    table, th, td {
+        border:2px solid black;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 100px;
+    }
+#btn{
+   margin-left: 14rem;
+}
+</style>
+<body>
+    <table>
+        <tr>
+            <th colspan="2">XYZ Online Delivery</th>
+        </tr>
+        <tr>
+            <th colspan="2">Personal Details</th>
+        </tr>
+        <tr>
+            <td>FirstName</td>
+            <td><input type="text" id="username" name="username" maxlength="10"></td>
+        </tr>
+        <tr>
+            <td>Phone Number</td>
+            <td><input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"></td>
+        </tr>
+        <tr>
+            <th colspan="2">Order Preferences</th>
+        </tr>
+        <tr>
+            <td>Size</td>
+            <td><input type="radio" id="size" name="size">small <input type="radio" id="size" name="size">Medium <input type="radio" id="size" name="size">Large </td>
+
+        </tr>
+        <tr>
+            <td>Base</td>
+            <td>
+                <select name="Details" id="Details">
+                  <option value="Chichen ">Chichen </option>
+                  <option value="Fish">Fish</option>
+                  <option value="Mutton">Mutton</option>
+                </select></td>
+        </tr>
+        <tr>
+            <td>Toppins</td>
+            <td><input type="checkbox" id="Topping" name="Topping">panner
+                <input type="checkbox" id="Topping" name="Topping">Cheese
+                <input type="checkbox" id="Topping" name="Topping">Corn
+                <input type="checkbox" id="Topping" name="Topping">Capsicum
+                <input type="checkbox" id="Topping" name="Topping">Onions</br>
+                <input type="checkbox" id="Topping" name="Topping">SpiceMIx
+                <input type="checkbox" id="Topping" name="Topping">peri peri
+                <input type="checkbox" id="Topping" name="Topping">Olives
+            </td>
+        </tr>
+        <tr>
+            <td>Additional Details</td>
+            <td><textarea id="AdditionalDetails" name="AdditionalDetails" rows="4" cols="50">
+             </textarea></td>
+        </tr>
+        <tr>
+            <th colspan="2">Confirm Details and Proceed to Pay ? <input type="radio" id="confirm" name="confirm">YES<input type="radio" id="confirm" name="confirm">NO</th>
+        </tr>
+        <tr>
+            <td colspan="4"><button id="btn">Submit</button></td>
+        </tr>
+    </table>
+
+    
+</body>
+</html>

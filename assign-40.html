@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <style>
+        table {
+            border:2px solid black;
+            margin-left: auto;
+            margin-right: auto;
+            
+        }
+        th,td{
+            border:2px solid black;
+            padding: 10px;
+        }
+        samp {
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .required-fields::after {
+            content: "*";
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <form>
+            <tr>
+                <th colspan="3">XYZ University Student Registration</th>
+            </tr>
+
+            <tr>
+                <th rowspan="4">Personal Details</th>
+                <td><label>First Name</label></td>
+                <td><input type="text" name="fname" id="fname" maxlength="10" class="required-fields" required></td>
+            </tr>
+            <tr>
+                <td><label>Last Name</label></td>
+                <td><input type="text" name="lname" id="lname" maxlength="10" class="required-fields" required></td>
+            </tr>
+            <tr>
+                <td><label>Date of Birth</label></td>
+                <td><input type="date" name="dob" id="dob" class="required-fields" required></td>
+            </tr>
+            <tr>
+                <td><label>Gender</label></td>
+                <td><input type="radio" name="gender" id="male"><label>Male</label>
+                <input type="radio" name="gender" id="female"><label>Female</label>
+                <input type="radio" name="gender" id="other"><label>other</label></td>
+            </tr>
+
+            <tr>
+                <th rowspan="4">Academic Details</th>
+                <td><label>Degree</label></td>
+                <td><select name="degree" id="degree">
+                    <option value="UG">UG</option>
+                    <option value="PG">PG</option>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td><label>Specialization</label></td>
+                <td><input type="text" name="spec" id="spec" maxlength="40" class="required-fields" required></td>
+            </tr>
+            <tr>
+                <td><label>Mode of instruction</label></td>
+                <td><input type="checkbox" name="mode1" id="mode1" value="Classroom"><label>Classroom</label>
+                <input type="checkbox" name="mode2" id="mode2" value="Online"><label>Online</label></td>
+            </tr>
+            <tr>
+                <td><label>Current GPA</label></td> 
+                <td><input type="number" name="cgpa" id="cgpa" step="0.1" max="5" class="required-fields" required></td>
+            </tr>
+
+
+            <tr>
+                <th rowspan="2">Contact Details</th>
+                <td><label>Phone Number</label></td>
+                <td><input type="tel" name="phone" id="phone" class="required-fields" required></td>
+            </tr>
+            <tr>
+                <td><label>Address</label></td>
+                <td><textarea name="address" id="address" rows="4" cols="60" maxlength="40" class="required-fields" required></textarea></td>
+            </tr>
+
+            <tr>
+                <td colspan="3" style="text-align:center;"><samp>I assure all the details entered are correct:</samp>
+                    <input type="checkbox" id="yes"><label>Yes</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="3" style="text-align:center;"><button type="button" value="submit">Submit</button></td>
+            </tr>
+
+        </form>
+    </table>
+    
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+        }
+        .navbar{
+            display: flex;
+            flex-direction: row;
+            justify-content: first baseline;
+            background-color: brown;
+            height: 10%;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .navbar li{
+            display: inline-block;
+            list-style: none;
+            padding: 0 60px;
+        }
+
+        a{
+            text-decoration: none;
+            color: white;
+            font-size: 15px;
+        }
+        body {
+            background-color: red;
+        }
+        h2{
+            margin-left: 10px;
+            font-size: 18px;
+            color: white;
+        }
+
+        h3{
+            margin-left: 20px;
+            font-size: 20px;
+            color: brown;
+        }
+
+        .content{
+            background-color: white;
+            height: 600px;
+            padding: 5px;
+            
+        }
+
+        p,pre{
+            font-size: 18px;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-left:20px ;
+            margin-right:20px ;
+            float: left;
+        }
+        .sub-content {
+            border: 1px solid brown;
+            width:300px;
+            float: right;
+            margin-right: 60px;
+            padding: 0 5px;
+        }
+        .sub-content-header{
+            background-color: brown;
+            height: 30px;
+            color: white;
+            font-size: 20px;
+            
+            
+        }
+        .sub-content a,li{
+            color: blue;
+            font-size: 20px;
+        }
+        .footer{
+            display: flex;
+            flex-direction: row;
+            background-color: brown;
+            height:60px;
+
+        }
+        .footer div:last-child{
+            margin-left: auto;
+        }
+        .footer li {
+            display: inline-block;
+            flex-direction: row;
+            list-style: none;
+            padding: 0 5px;
+            margin-top: 25px;
+            font-size: 15px;
+        }
+        h5{
+            color: white;
+            margin-top: 40px;
+            font-size: 15px;
+            margin-left: 10px;
+        }
+
+        hr{
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <h2>Way Far</h2>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">POPULAR DESTINATIONS</a></li>
+                <li><a href="#">TOUR PACKAGES</a></li>
+                <li><a href="#">OFFERS</a></li>
+                <li><a href="#">ENQUIRE US</a></li>
+                <li><a href="#">GALLERY</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h3>About Us</h3>
+            <h3>WayFar-Making Moments to Memories</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, laboriosam. Fugiat molestias facilis, aliquid accusantium minima aperiam sapiente odit dolores sint laudantium iure magni pariatur quos impedit qui eveniet deleniti?
+            </p><hr>
+            <h3>Trip Testimonials</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos exercitationem soluta est asperiores velit, officia fugiat maiores, delectus aliquid obcaecati nemo impedit culpa vel molestias, ratione voluptatem repudiandae inventore quam. 
+            </p><hr>
+            <h3>Awards</h3>
+            <pre>1.Way Far is rated Indias best travelling ageinces in 2022.
+2.Way Far is voted Indias best Vacation IQ in 2022.
+3.Way Far is voted Indias best silver peacock in 2022.</pre>
+            <div class="sub-content">
+                <div class="sub-content-header">&nbsp; Know more about:</div>
+                <ul>
+                    <li><a href="#">Times Travel Award</a></li>
+                    <li><a href="#">Vacation IQ</a></li>
+                    <li><a href="#">Silver peacock Award</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer">
+            <h5>Copyright @WayFar, 2022</h5>
+            <div>
+                <ul>
+                    <li><a href="#">Contact Us |</a></li>
+                    <li><a href="#">Terms & Conditions |</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
