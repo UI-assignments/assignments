@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment17</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+        .header {
+            background-color: rgb(70, 95, 186);
+            padding: 15px;
+            text-align: center;
+            width: 500px;
+        }
+
+        .content {
+            background-color: rgb(198, 191, 191);
+            margin-top: 10px;
+            text-align: center;
+            width: 500px;
+            padding: 15px;
+        }
+
+        .content label {
+            display: inline-block;
+            text-align: left;
+            margin-bottom: 20px;
+
+        }
+
+        button {
+            height: 40px;
+            width: 100px;
+            border-radius: 5px;
+            border-color: rgb(114, 112, 112) ;
+            background-color: rgb(50, 218, 50);
+            color: white;
+            font-weight: bold;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Modify the values and click the Calculate button to use.</div>
+        <div class="content">
+            <label>Date of birth</label>
+            <input type="date" id="dob"><br>
+
+            <label style="margin-left:-45px ;">Age at the Date of</label>
+            <input type="date" id="otherdate"><br>
+
+            <button type="submit" onclick="Calculate_age()">Calculate</button>
+
+            <p style="color: red; font-size:13px;" id="message"></p>
+
+            <h3 style="color:rgb(70, 95, 186) ;" id="result"></h3>
+            
+        </div>
+    </div>
+
+    <script>
+        function Calculate_age() {
+            var userinput_1 = document.getElementById("dob").value;
+            var dob_date = new Date(userinput_1);
+    
+            var userinput_2 = document.getElementById("otherdate").value;
+            var other_date = new Date(userinput_2);
+
+            if(userinput_1==null || userinput_1=='' || userinput_2==null || userinput_2=='') {
+
+                document.getElementById("message").innerHTML="* Please select both the fileds *"
+                return;
+            } 
+
+            var age = (other_date.getFullYear()-dob_date.getFullYear());
+            if(other_date.getMonth() < dob_date.getMonth() || other_date.getMonth() == dob_date.getMonth() && other_date.getDate() < dob_date.getDate()) {
+                age--;
+            }
+            document.getElementById("result").innerHTML = "Age is "+age+" years";
+
+        }
+
+    </script>
+</body>
+</html>
