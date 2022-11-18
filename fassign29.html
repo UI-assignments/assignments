@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment29</title>
+</head>
+<script>
+    const library = [ 
+   { author: 'Bill Gates', title: 'The Road Ahead', libraryID: 1254},
+   { author: 'Steve Jobs', title: 'Walter Isaacson', libraryID: 4264},
+   { author: 'Suzanne Collins', title: 'Mockingjay: The Final Book of The Hunger Games', libraryID: 3245}
+   ];
+
+function compare_to_sort(x,y) 
+ {
+  if (x.title < y.title)
+    return -1;
+  if (x.title > y.title)
+    return 1;
+  return 0;
+ }
+
+console.log(library.sort(compare_to_sort));
+
+</script>
+<body>
+    
+</body>
+</html>
