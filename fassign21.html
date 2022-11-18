@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21</title>
+    <style>
+        input {
+            height:30px;
+            width:200px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button type="button" onclick="addelements()">Add Element</button>
+        <button type="button" onclick="removeelements()">Remove Element</button>
+        <button type="button" onclick="removeall()">Remove All Elements</button>
+        <button type="button" onclick="caps()">Convert to Uppercase </button>
+        <button type="button" onclick="small()">Convert to Lowercase </button>
+        <form>
+            <input type="text" name="box1" id="box1" /><br>
+            <input type="text" name="box2" id="box2" /><br>
+            <input type="text" name="box3" id="box3" /><br>
+        </form>
+        <div>Your selected values:</div>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        var items = [];
+        var array2=[];
+        /*var a="";
+        function myfunction(item) {
+            a += item  + "<br>";
+        }*/
+        function addelements() {
+            boxvalue1 = document.getElementById('box1').value;
+            boxvalue2 = document.getElementById('box2').value;
+            boxvalue3 = document.getElementById('box3').value;
+            items.push(boxvalue1,boxvalue2,boxvalue3);
+            console.log(items);
+            //items.forEach(myfunction);
+            document.getElementById("result").innerHTML=items;
+            return false
+
+        }
+
+        function removeelements() {
+            items.pop();
+            console.log(items);
+            document.getElementById("result").innerHTML=items;
+        }
+
+        function removeall() {
+            items=[];
+            document.getElementById("result").innerHTML=items;
+        }
+
+        function caps() {
+            array2=items;
+            array2 = array2.map(function(x){ 
+                return x.toUpperCase();
+             })
+            document.getElementById("result").innerHTML=array2;
+        }
+
+        function small() {
+            document.getElementById("result").innerHTML=items;
+        }
+
+        function addshift() {
+
+        }
+    </script>
+</body>
+</html>
