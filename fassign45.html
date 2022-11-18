@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment46</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(1, 1, 45);
+            width:100%;
+        }
+
+        .signup,.login {
+            border: 4px solid rgb(255, 191, 0);
+            border-radius: 3px;
+            background-color: rgb(4, 4, 102);
+            color: white;
+            text-align: center;
+            width:400px;
+            margin: 20px;
+        }
+        .signup input,.login input {
+            margin: 10px;
+        }
+        
+        h2 {
+            background-color: rgb(255, 191, 0);
+            color: white;
+            font-style: italic;
+            width:250px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 40px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .signup input[type=text],input[type=password],input[type=email],input[type=date],.login input[type=text] {
+            height: 30px;
+            width: 250px;
+            border-radius: 5px;
+        }
+
+        button {
+            height: 30px;
+            width: 250px;
+            background-color:  rgb(255, 170, 0);
+            color: white;
+            font-style: italic;
+            border-radius: 5px;
+            border: 4px solid rgb(255, 170, 0);
+            margin: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="signup">
+            <form action="#">
+                <h2>SignUp Here</h2>
+                <input type="text" name="fname" id="fname" placeholder="FirstName" style=" height:30px; width:250px;" required/><br>
+                <input type="text" name="lname" id="lname" placeholder="LastName" required/><br>
+                <input type="email" name="mail" id="mail" placeholder="Enter Email" required/><br>
+                <input type="password" name="pswd" id="pswd" placeholder="Enter Password" required/><br>
+                <input type="password" name="rpswd" id="rpswd" placeholder="Renter Password" required/><br>
+                <label for="dob">Enter Your Date of Birth:</label><br>
+                <input type="date" name="dob" id="dob" required/><br>
+                <input type="radio" name="gender" id="male"/><label>Male</label>
+                <input type="radio" name="gender" id="female"/><label>FeMale</label>
+                <input type="radio" name="gender" id="others"/><label>Others</label><br>
+                <input type="checkbox" name="terms" id="terms" required><label>I agree all the terms and conditions</label><br>
+                <button type="button" onclick="saveData()" id="save_btn">Submit Here</button>
+            </form>
+        </div>
+
+        <div class="login">
+            <form action="#">
+                <h2>Login Here</h2>
+                <input type="email" name="mail" id="lmail" placeholder="Enter Email" required/><br>
+                <input type="password" name="pswd" id="lpswd" placeholder="Enter Password" required/><br>
+                <button type="submit" onclick="logincheck()" >Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        //storing registration values
+        function saveData()
+        {
+            let fname,lname,email,pswd,dob;
+            fname=document.getElementById("fname").value;
+            lname=document.getElementById("lname").value;
+            email=document.getElementById("mail").value;
+            pswd=document.getElementById("pswd").value;
+            dob=document.getElementById("dob").value;
+
+            let user_records=new Array();
+            user_records=JSON.parse(localStorage.getItem("users"))?JSON.parse(localStorage.getItem("users")):[]
+            if(user_records.some((v)=>{return v.email==email}))
+            {
+                alert("duplicate data");
+            }
+            else{
+                user_records.push({
+                    "fname":fname,
+                    "lname":lname,
+                    "email":email,
+                    "pswd":pswd,
+                    "dob":dob
+                })
+                localStorage.setItem("users",JSON.stringify(user_records));
+                alert("Sucessfully registered.")
+
+            }
+            console.log(user_records);
+            console.log("test");
+        }
+//checking
+        let email=localStorage.getItem('email')?localStorage.getItem('email'):''
+        console.log(email);
+        if(email!='')
+        {
+          alert('Please register');
+        }
+
+        function logincheck(){
+            let email,psw;
+            email=document.getElementById("lmail").value;
+            psw=document.getElementById("lpswd").value;
+            
+            let user_records=new Array();
+            user_records=JSON.parse(localStorage.getItem("users"))?JSON.parse(localStorage.getItem("users")):[]
+            if(user_records.some((v)=>{return v.email==email && v.psw==psw}))
+            {
+                alert("Login Pass");
+                let current_user=user_records.filter((v)=>{return v.email==email && v.psw==psw})[0]
+                localStorage.setItem('lmail',current_user.email);
+                localStorage.setItem('lpswd',current_user.pswd);
+            }
+            else{
+                alert('Login Fail');
+            }
+        }
+/*
+        const signUp = e => {
+            let formData= {
+                fname:document.getElementById("fname").value,
+                lname:document.getElementById("lname").value,
+                email:document.getElementById("mail").value,
+                pwd:document.getElementById("pswd").value,
+                dob:document.getElementById("dob").value,
+                
+
+            }
+            localStorage.setItem('formData',JSON.stringify(formData));
+            console.log(localStorage.getItem('formData'));
+            e.preventDefault();
+
+        }
+
+        //checking using login
+
+        function login() {
+            var email = document.getElementById('lmail').value;
+
+            var user=JSON.parse(localStorage.getItem('formData'));
+            if(!user){
+                console.log("user doesn't exist");
+            }
+
+            var pwd=document.getElementById("lpswd").value;
+            if(user.pwd !== pwd) {
+                console.log("wrong password");
+            }
+
+            console.log("logged in sucessfully")
+        }
+        */
+
+    </script>
+</body>
+</html>
