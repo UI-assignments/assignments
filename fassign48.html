@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h1>OUT PUT IS VISIBLE IN CONSOLE</h1>
+<p id="demo"></p>
+<script>
+const numbers = [175, 50, 25];
+document.getElementById("demo").innerHTML = numbers.reduce(myFunc);
+
+function myFunc(total, num) {
+  return total - num;
+}
+</script>
+
+</body>
