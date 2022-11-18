@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Implement Sticky Header and Footer with CSS</title>
+<style>
+    .fixed-header{
+        display: flex;
+        flex-direction: row;
+        background: #728FCE;
+        top:0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .fixed-header div:last-child{
+            margin-left: auto;
+        }
+
+    .fixed-footer{
+        text-align: center;
+        background-color:#728FCE;
+        font-family: Arial, Helvetica, sans-serif;
+        height:50px;
+        margin-top: 230px;
+        color: white;
+        font-size: 15px;
+
+    }
+
+    .container{
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+    }
+    .navbar{
+        display: flex;
+        flex-direction: row;
+        height: 10%;
+        color: white;
+
+
+    }
+
+    .navbar li {
+        display: inline-block;
+        list-style: none;
+        padding: 0 5px;
+        
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+
+    }
+
+    img{
+        float: left;
+        width: 95%;
+        border-radius: 3px;
+        margin-top: 20px;
+    }
+    button{
+        background: #728FCE;
+        color: white;
+        border: none;
+        margin-left: 1rem;
+        height: 2rem;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .logo{
+        margin-top: 15px;
+        color:white;
+        margin-left: 5px;
+    }
+
+
+    
+</style>
+</head>
+<body>
+    <div class="fixed-header">
+        <div class="logo">AutoMob-Mechanic</div>
+        <div class="container">
+            <div class="navbar">
+                <ul>
+                    <li><a href="#"> Home |</a></li>
+                    <li><a href="#"> About |</a></li>
+                    <li><a href="#"> Products |</a></li>
+                    <li><a href="services.html">Services |</a></li>
+                    <li><a href="#"> Contact Us |</a></li>
+                    <li><a href="#">Contact@automob.com |</a></li>
+                    <li><a href="#">9999999999 </a></li>
+                </ul>    
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div id="img1">
+            <img src="https://media.istockphoto.com/photos/checking-oil-in-car-engine-picture-id1157179147?k=20&m=1157179147&s=612x612&w=0&h=UKbu3rdN-53cmKSO8NvuNl5Ve7Lh29rsUkVeARnE87M=">    
+        </div>
+        <div id="content">
+            <h2>About Us</h2>
+            <p>"One Stop Solution for Car Repair and Services"</p>
+            <p>At AutoMob Mehanic we aim to make the car repair and service straight forward by providing<br>
+            Services for reparing , servicing and maintaining Leading - expertise in all forms.</p>
+            <h4>How it Works ?</h4>
+            <p><b>Choose the Service</b></p>
+            <p>choose the perfect service to the Car</p>
+            <button onclick="window.location.href='Services.html'">Explore More</button>
+        </div>
+    </div>    
+    <div class="fixed-footer">
+        <div>Copyright &copy; 2016 Your Company  All Rights Reserved.</div>        
+    </div>
+</body>
+</html>
