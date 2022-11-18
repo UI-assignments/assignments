@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment11</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        table thead, tbody,tr,th,td {
+            border-bottom: 1px solid rgb(206, 205, 205);
+            padding: 15px;
+            
+        }
+
+        table thead {
+            font-weight: bold;
+            border-top : 2px solid rgb(206, 205, 205) ;
+            border-bottom: 2px solid rgb(206, 205, 205) ;
+        }
+
+        #del_button {
+            border-radius: 5px;
+            background-color: rgb(255, 5, 5);
+            color:white;
+            width: 100px;
+            height:40px;
+            border-color: white;
+        }
+        td {
+            transition: font-size 500ms ease-in-out, padding 500ms ease-in-out;
+        }
+        
+    </style>
+</head>
+<body>
+    <table id="mytable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>City</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="datas"></tbody>
+    </table>
+    <script>
+        var a =[
+            {name:"Rahul", gender:"Male", city:"Kakinada"},
+            {name:"Suresh", gender:"Male", city:"vizag"},
+            {name:"John", gender:"Male", city:"canada"},
+            {name:"Henry", gender:"Male", city:"USA"},
+        ]
+
+        //insert array data into table
+        var table = document.getElementById("datas");
+        table.innerHTML="";
+        var tr="";
+        a.forEach(x=> {
+            tr+='<tr>';
+            tr+='<td>'+x.name+'</td>'+'<td>'+x.gender+'</td>'+'<td>'+x.city+'</td>'
+            tr+='<td>'+'<input type="button" id="del_button" value="Delete" onclick="Delete_Data(this)">'+'</td>'
+            tr+='</tr>'
+        })
+        table.innerHTML+=tr;
+
+        //Deleting row 
+        function Delete_Data(r) {
+            var i = r.parentNode.parentNode.rowIndex;
+            document.getElementById("mytable").deleteRow(i);
+        }
+
+    </script>
+</body>
+</html>
+
