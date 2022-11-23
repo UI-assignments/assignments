@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22</title>
+</head>
+<body>
+
+    <style>
+        .container {
+            background-color: green;
+            border: 2px solid #000;
+            height: 500px;
+            width: 100%;
+        }
+    
+        h3 {
+            color: #fff;
+        }
+    
+        .section {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    
+        .left_section {
+            margin-left: 30px;
+        }
+    
+        input {
+            width: 300px;
+        }
+    
+        #empno {
+            margin-left: 30px;
+        }
+    
+        #empname {
+            margin-left: 45px;
+        }
+    
+        #cityadd,
+        #dob {
+            margin-left: 68px;
+        }
+    
+        #tele {
+            margin-left: 28px;
+        }
+    
+        #dpt {
+            margin-left: 75px;
+        }
+    
+        .right_Section {
+            border: 2px solid #fff;
+            height: 300px;
+            width: 500px;
+            margin-right: 45px;
+        }
+    
+        #btn {
+            margin: 10px 100px;
+            padding: 5px;
+            background-color: #dadaca;
+            cursor: pointer;
+        }
+    
+        .footer {
+            border: 2px solid #fff;
+            width: 92%;
+            margin: 40px 0px 0px 55px;
+        }
+    
+        #btn_footer {
+            width: 279px;
+            padding: 5px;
+            background-color: #dadaca;
+            margin: 10px 0px 10px 0px;
+            cursor: pointer;
+        }
+    
+        #btn_footer:first-child {
+            margin-left: 10px;
+        }
+    </style>
+    
+    <body>
+        <div class="container">
+            <h3>Employee's Information System Version 1.0</h3>
+            <div class="section">
+                <div class="left_section">
+                    <label for="empno">Employee Number</label>
+                    <input type="text" id="empno" name="info1"><br><br>
+                    <label for="empname">Employee Name</label>
+                    <input type="text" id="empname" name="info2"><br><br>
+                    <label for="cityadd">City Address</label>
+                    <input type="text" id="cityadd" name="info3"><br><br>
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="info4"><br><br>
+                    <label for="tele">Telephone Number</label>
+                    <input type="text" id="tele" name="info5"><br><br>
+                    <label for="dpt">Department</label>
+                    <input type="text" id="dpt" name="info6"><br>
+                </div>
+                <div class="right_Section">
+                    <input type="button" id="btn" value="ADD"><br>
+                    <input type="button" id="btn" value="DELETE"><br>
+                    <input type="button" id="btn" value="UPDATE"><br>
+                    <input type="button" id="btn" value="SEARCH"><br>
+                    <input type="button" id="btn" value="ABOUT"><br>
+                    <input type="button" id="btn" value="QUIT"><br>
+                </div>
+            </div>
+            <div class="footer">
+                <input type="button" id="btn_footer" value="Move First">
+                <input type="button" id="btn_footer" value="Move Next">
+                <input type="button" id="btn_footer" value="Move Previous">
+                <input type="button" id="btn_footer" value="Move Last">
+            </div>
+        </div>
+    </body>
+    
+    
+</body>
+</html>

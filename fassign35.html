@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>35</title>
+</head>
+<body>
+    <div>
+        <h3>Simulating a periodic stock price change using Math.random() method</h3><br>
+    </div>
+</body>
+<script>
+    var stock_price;
+    var count = 0;
+    stock_price = setInterval(stock = () => {
+        count++;
+        if(count === 5){
+            clearInterval(stock_price);
+        }
+        var random_price = Math.floor((Math.random() * 100) + 1);
+        document.write("Periodic Stock Price is : " + random_price + "<br>");
+        console.log("Periodic Stock Price is : " + random_price);
+    }, 3000);
+
+</script>
+</html>
